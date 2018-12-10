@@ -15,13 +15,12 @@ public class BasePage {
 
     public void load() {
         driver.navigate().to("https://shop.eurosport.co.uk/");
-//        driver.navigate().to("https://www.just-eat.co.uk/");
         driver.manage().window().maximize();
     }
 
     public void waitTillContentVisible() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(DEFAULT_ELEMENT_TIME_OUT);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
